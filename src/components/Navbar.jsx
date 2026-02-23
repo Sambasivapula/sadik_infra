@@ -44,13 +44,20 @@ const Navbar = () => {
             <nav className={`sticky top-0 z-50 transition-all duration-500 ${scrolled ? 'bg-primary/95 backdrop-blur-md shadow-2xl shadow-black/20 py-2' : 'bg-primary py-3'}`}>
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between items-center">
-                        {/* Logo */}
                         <Link to="/" className="flex items-center group">
                             <img
                                 src="/images/Sadik_Logo.png"
                                 alt="Sadik Infra Logo"
-                                className="h-12 md:h-14 w-auto object-contain transition-transform group-hover:scale-105 duration-300"
+                                className="h-10 md:h-12 w-auto object-contain transition-transform group-hover:scale-105 duration-300 mr-3"
                             />
+                            <div>
+                                <span className="text-xl font-heading font-bold text-white tracking-wider block leading-tight">
+                                    SADIK INFRA
+                                </span>
+                                <span className="text-[10px] text-secondary/80 font-semibold tracking-[0.25em] uppercase block">
+                                    Infrastructure & Civil Eng.
+                                </span>
+                            </div>
                         </Link>
 
                         {/* Desktop Menu */}
