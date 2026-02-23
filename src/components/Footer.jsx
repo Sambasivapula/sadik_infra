@@ -99,63 +99,13 @@ const Footer = () => {
                 </div>
             </div>
 
-            {/* ─── Crawlup Promotion Section (Centered) ─── */}
-            <div className="border-t border-white/5 bg-gradient-to-r from-primary via-accent to-primary">
-                <div className="container mx-auto px-4 md:px-6 py-6 md:py-8">
-                    <div className="flex flex-col items-center text-center">
-                        {/* Crawlup Logo & Branding */}
-                        <a
-                            href="https://crawlup.in/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="group flex flex-col items-center gap-3 mb-4"
-                        >
-                            <img
-                                src="/images/crawlop-badge.png"
-                                alt="Crawlup"
-                                className="h-8 md:h-10 w-auto opacity-80 group-hover:opacity-100 transition-all group-hover:scale-105"
-                            />
-                            <div className="flex flex-col items-center">
-                                <span className="text-[10px] text-gray-500 uppercase tracking-widest mb-0.5">Designed & Developed by</span>
-                                <span className="text-secondary font-heading font-bold text-base md:text-lg tracking-wide group-hover:text-white transition-colors">
-                                    Crawlup <ExternalLink size={12} className="inline ml-1 opacity-40" />
-                                </span>
-                            </div>
-                        </a>
 
-                        {/* What Crawlup offers */}
-                        <div className="flex flex-wrap justify-center gap-3 md:gap-5 mt-2">
-                            {[
-                                { icon: Globe, label: 'Websites' },
-                                { icon: Palette, label: 'Branding' },
-                                { icon: Code2, label: 'Web Apps' },
-                                { icon: BarChart3, label: 'Digital Growth' },
-                            ].map((item, i) => (
-                                <a
-                                    key={i}
-                                    href="https://crawlup.in/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="flex items-center gap-1.5 text-gray-500 hover:text-secondary transition-colors"
-                                >
-                                    <item.icon size={12} />
-                                    <span className="text-[10px] md:text-[11px] font-medium uppercase tracking-wider">{item.label}</span>
-                                </a>
-                            ))}
-                        </div>
-
-                        <p className="text-gray-700 text-[10px] mt-4 tracking-wide">
-                            Need a premium website for your business? Visit <a href="https://crawlup.in/" target="_blank" rel="noopener noreferrer" className="text-secondary hover:text-white transition-colors font-semibold underline">crawlup.in</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
 
             {/* Copyright */}
             <div className="border-t border-white/5">
                 <div className="container mx-auto px-4 py-4 text-center">
                     <p className="text-gray-700 text-[10px] tracking-wide">
-                        &copy; {currentYear} {companyConfig.name}. All rights reserved.
+                        &copy; 2026 CrawlUP. All rights reserved.
                     </p>
                 </div>
             </div>

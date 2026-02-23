@@ -9,12 +9,14 @@ import Services from './pages/Services';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
+import AdminDashboard from './pages/AdminDashboard';
 
 function App() {
   return (
     <HelmetProvider>
       <Router>
         <Routes>
+          <Route path="/admin/dashboard" element={<AdminDashboard />} />
           <Route path="/" element={<MainLayout />}>
             <Route index element={<Home />} />
             <Route path="about" element={<About />} />

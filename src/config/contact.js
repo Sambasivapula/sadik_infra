@@ -1,7 +1,7 @@
 export const contactConfig = {
     whatsapp: "+918374039890",
     notificationPhone: "+918374039890",
-    notificationEmail: "pawanjarugumallipk@gmail.com",
+    notificationEmail: "sambap@crawlup.in",
     // CallMeBot WhatsApp API key
     // To get your API key:
     // 1. Save +34 644 59 71 67 in your contacts

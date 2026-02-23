@@ -22,7 +22,7 @@ const CTASection = () => {
                     <Link to="/contact" className="group bg-secondary text-primary px-6 md:px-10 py-3 md:py-4 font-bold text-sm md:text-base hover:bg-white transition-colors inline-flex items-center justify-center uppercase tracking-wide">
                         Get a Free Quote <ArrowRight className="ml-2 md:ml-3 group-hover:translate-x-1 transition-transform" size={16} />
                     </Link>
-                    <a href="tel:+918374039890" className="border border-white/20 text-white px-6 md:px-10 py-3 md:py-4 font-semibold text-sm md:text-base hover:bg-white hover:text-primary transition-all inline-flex items-center justify-center backdrop-blur-sm">
+                    <a href="tel:+918919939269" className="border border-white/20 text-white px-6 md:px-10 py-3 md:py-4 font-semibold text-sm md:text-base hover:bg-white hover:text-primary transition-all inline-flex items-center justify-center backdrop-blur-sm">
                         <PhoneCall className="mr-2 md:mr-3" size={16} /> Call Direct
                     </a>
                 </div>

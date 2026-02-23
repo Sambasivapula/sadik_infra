@@ -4,7 +4,7 @@ export const companyConfig = {
     fullDescription: "Government-Registered Infrastructure & Civil Engineering Firm",
     address: "Guntur, Andhra Pradesh, India",
     phone: "+91 83740 39890",
-    email: "pawanjarugumallipk@gmail.com",
+    email: "sambap@crawlup.in",
     workingHours: "24/7 Project Support",
     founded: "2012",
     states: "Andhra Pradesh & Telangana",
