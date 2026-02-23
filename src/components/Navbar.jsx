@@ -46,17 +46,11 @@ const Navbar = () => {
                     <div className="flex justify-between items-center">
                         {/* Logo */}
                         <Link to="/" className="flex items-center group">
-                            <div className="mr-3">
-                                <div className="w-10 h-10 bg-secondary flex items-center justify-center font-heading font-black text-primary text-lg">S</div>
-                            </div>
-                            <div>
-                                <span className="text-xl font-heading font-bold text-white tracking-wider block leading-tight">
-                                    SADIK INFRA
-                                </span>
-                                <span className="text-[10px] text-secondary/80 font-semibold tracking-[0.25em] uppercase block">
-                                    Infrastructure & Civil Eng.
-                                </span>
-                            </div>
+                            <img
+                                src="/images/Sadik_Logo.png"
+                                alt="Sadik Infra Logo"
+                                className="h-12 md:h-14 w-auto object-contain transition-transform group-hover:scale-105 duration-300"
+                            />
                         </Link>
 
                         {/* Desktop Menu */}
