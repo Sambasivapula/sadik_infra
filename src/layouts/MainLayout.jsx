@@ -5,6 +5,7 @@ import Footer from '../components/Footer';
 import PoweredBy from '../components/PoweredBy';
 import WhatsAppButton from '../components/WhatsAppButton';
 import ScrollToTop from '../components/ScrollToTop';
+import BottomNav from '../components/BottomNav';
 
 const MainLayout = () => {
     return (
@@ -17,6 +18,7 @@ const MainLayout = () => {
             <Footer />
             <PoweredBy />
             <WhatsAppButton />
+            <BottomNav />
         </div>
     );
 };

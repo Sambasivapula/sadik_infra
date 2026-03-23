@@ -3,10 +3,8 @@ import { contactConfig } from '../config/contact';
 
 const WhatsAppButton = () => {
     const handleClick = () => {
-        const message = "Hello Sadik Infra, I am interested in your construction services.";
-        // Always use wa.me — it opens WhatsApp Web on desktop, WhatsApp app on mobile
-        const url = `https://wa.me/${contactConfig.whatsapp}?text=${encodeURIComponent(message)}`;
-        window.open(url, '_blank');
+        const url = `https://wa.me/918919939269`;
+        window.open(url, '_blank', 'noopener,noreferrer');
     };
 
     return (

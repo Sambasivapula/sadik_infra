@@ -1,6 +1,6 @@
-﻿import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ShieldCheck, ArrowRight, Building2, TrendingUp, CheckCircle, FileText, CheckSquare, Wrench, Truck, ChevronDown, Droplets, Waves, Shovel } from 'lucide-react';
 import SectionTitle from '../components/SectionTitle';
 import ProjectCard from '../components/ProjectCard';
@@ -14,6 +14,23 @@ const stagger = { visible: { transition: { staggerChildren: 0.15 } } };
 
 const Home = () => {
     const [selectedProject, setSelectedProject] = useState(null);
+    const [currentImage, setCurrentImage] = useState(0);
+
+    const sliderImages = [
+        "/images/slider_1.jpg",
+        "/images/slider_2.jpg",
+        "/images/slider_3.jpg",
+        "/images/slider_4.jpg",
+        "/images/slider_5.jpg"
+    ];
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrentImage((prev) => (prev + 1) % sliderImages.length);
+        }, 4000); // 4 seconds auto-slide
+        return () => clearInterval(timer);
+    }, [sliderImages.length]);
+
     return (
         <div className="flex flex-col bg-white">
             <MetaWrapper
@@ -21,11 +38,36 @@ const Home = () => {
                 description="Government-Approved Infrastructure Contractors Since 2012. Civil, Irrigation, Sewerage & Urban Development across AP & Telangana."
             />
 
-            {/* â”€â”€ HERO â”€â”€ */}
-            <section className="relative min-h-[85vh] md:min-h-screen flex items-center overflow-hidden">
-                <div className="absolute inset-0 z-0">
-                    <img src="/images/hero-construction.jpg" alt="Infrastructure" className="w-full h-full object-cover" loading="eager" />
-                    <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/85 to-primary/70"></div>
+            {/* ―― HERO ―― */}
+            <section className="relative min-h-[100vh] flex items-center overflow-hidden">
+                <div className="absolute inset-0 z-0 bg-black">
+                    <AnimatePresence mode="popLayout">
+                        <motion.img
+                            key={currentImage}
+                            src={sliderImages[currentImage]}
+                            initial={{ opacity: 0, scale: 1.05 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            exit={{ opacity: 0 }}
+                            transition={{ duration: 1 }}
+                            className="absolute inset-0 w-full object-cover"
+                            style={{ height: '100vh', width: '100%', objectFit: 'cover' }}
+                            loading="eager"
+                            drag="x"
+                            dragConstraints={{ left: 0, right: 0 }}
+                            dragElastic={1}
+                            onDragEnd={(e, { offset }) => {
+                                const swipe = offset.x;
+                                if (swipe < -50) {
+                                    setCurrentImage((prev) => (prev + 1) % sliderImages.length);
+                                } else if (swipe > 50) {
+                                    setCurrentImage((prev) => (prev - 1 + sliderImages.length) % sliderImages.length);
+                                }
+                            }}
+                            alt="Infrastructure Slider"
+                        />
+                    </AnimatePresence>
+                    <div className="absolute inset-0" style={{ background: 'rgba(0,0,0,0.25)' }}></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-primary/60 via-primary/40 to-transparent pointer-events-none"></div>
                 </div>
 
                 <div className="container mx-auto px-4 relative z-10 pt-16 md:pt-20 pb-12 md:pb-16">
